@@ -10,7 +10,7 @@ import { addItem } from "../redux/myList/myListActions";
 
 const ListDetails = ({ title }) => {
   const dispatch = useDispatch();
-  const myListId = useSelector((state) => state.myListId);
+  const myListId = useSelector((state) => state.myList.myListId);
 
   return (
     <div className="absolute top-0 h-full w-full rounded-md list-details flex items-center justify-center ">

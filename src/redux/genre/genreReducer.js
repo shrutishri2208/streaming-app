@@ -1,7 +1,7 @@
 import { ACTIONS } from "./genreTypes";
 
 const initialState = {
-  genre: "trending",
+  genre: "home",
 };
 
 const genreReducer = (state = initialState, action) => {

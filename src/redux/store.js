@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from "redux";
-// import myListReducer from "./myList/myListReducer";
+import myListReducer from "./myList/myListReducer";
 import rootReducers from "./rootReducers";
 import storage from "redux-persist/lib/storage";
 import { persistReducer, persistStore } from "redux-persist";

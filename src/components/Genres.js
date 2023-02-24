@@ -2,32 +2,65 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Search from "./Search";
+import { useSelector, useDispatch } from "react-redux";
+import { setGenre } from "../redux/genre/genreActions";
 
-const Genres = ({ isMenu }) => {
-  const [isBrowse, setIsBrowse] = useState(true);
+const Genres = ({ isMenu, setIsMenu }) => {
+  const genre = useSelector((state) => state.genre.genre);
+  const dispatch = useDispatch();
   return (
     <div
-      className={`h-screen p-8 top-12 left-0 fixed genre-container ${
+      className={`h-screen p-8 top-14 left-0 fixed genre-container ${
         isMenu ? "genre-container-display" : "genre-container-close"
       }`}
     >
       <div className="flex flex-col text-left text-xl mt-10">
-        <button className="p-4 hover:bg-gray-800 hover:bg-opacity-50">
-          Home
+        <button
+          className="p-4 hover:bg-gray-800 hover:bg-opacity-50"
+          onClick={() => {
+            dispatch(setGenre("home"));
+            setIsMenu(false);
+          }}
+        >
+          <Link to="/">Home</Link>
         </button>
-        <button className="p-4 hover:bg-gray-800 hover:bg-opacity-50">
-          On Trending
+        <button
+          className="p-4 hover:bg-gray-800 hover:bg-opacity-50"
+          onClick={() => {
+            dispatch(setGenre("trending"));
+            setIsMenu(false);
+          }}
+        >
+          <Link to="/">Trending</Link>
         </button>
-        <button className="p-4 hover:bg-gray-800 hover:bg-opacity-50">
-          My List
+        <button className="p-4 hover:bg-gray-800 hover:bg-opacity-50 text-center">
+          <Link to="/myList">My List</Link>
         </button>
-        <button className="p-4 hover:bg-gray-800 hover:bg-opacity-50">
+        <button
+          className="p-4 hover:bg-gray-800 hover:bg-opacity-50"
+          onClick={() => {
+            dispatch(setGenre("movie"));
+            setIsMenu(false);
+          }}
+        >
           Movies
         </button>
-        <button className="p-4 hover:bg-gray-800 hover:bg-opacity-50">
+        <button
+          className="p-4 hover:bg-gray-800 hover:bg-opacity-50"
+          onClick={() => {
+            dispatch(setGenre("show"));
+            setIsMenu(false);
+          }}
+        >
           TV Series
         </button>
-        <button className="p-4 hover:bg-gray-800 hover:bg-opacity-50">
+        <button
+          className="p-4 hover:bg-gray-800 hover:bg-opacity-50"
+          onClick={() => {
+            dispatch(setGenre("kids"));
+            setIsMenu(false);
+          }}
+        >
           For Kids
         </button>
         <Search />

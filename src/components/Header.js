@@ -5,16 +5,19 @@ import NotificationList from "./NotificationList";
 import ProfileList from "./ProfileList";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { useDispatch } from "react-redux";
+import { setGenre } from "../redux/genre/genreActions";
 const Header = () => {
   const [isMenu, setIsMenu] = useState(false);
   const { pathname } = useLocation();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     setIsMenu(false);
   }, [pathname]);
 
   return (
-    <section className="flex justify-center items-center py-3 fixed top-0 w-full header ">
+    <section className="py-4 flex justify-center items-center fixed top-0 w-full header ">
       <button
         className="absolute left-8 top-4"
         onClick={() => setIsMenu(!isMenu)}
@@ -25,19 +28,16 @@ const Header = () => {
           <CloseIcon className="scale-125" />
         )}
       </button>
-      {/* {isMenu && <Genres />} */}
-      {isMenu && <Genres isMenu={isMenu} />}
+      {isMenu && <Genres isMenu={isMenu} setIsMenu={setIsMenu} />}
       <Link to="/">
-        <div className="watcher text-3xl font-bold text-blue-800 mr-12">
+        <div
+          className="watcher text-3xl font-bold text-blue-800 mr-12"
+          onClick={() => dispatch(setGenre("home"))}
+        >
           StreamR
-          {/* STREAMLY */}
         </div>
       </Link>
       <div className="flex absolute right-8 top-4">
-        {/* <Search /> */}
-        {/* <div className="mr-4">
-        <button>Children</button>
-      </div> */}
         <NotificationList />
         <ProfileList />
       </div>

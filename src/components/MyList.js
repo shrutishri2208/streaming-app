@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const MyList = () => {
   const dispatch = useDispatch();
-  const myList = useSelector((state) => state.myList);
+  const myList = useSelector((state) => state.myList.myList);
 
   return (
     <div className="mt-20">
@@ -15,7 +15,7 @@ const MyList = () => {
         {myList.length !== 0 && (
           <button
             className="bg-white text-black text-lg py-1 px-2 rounded-md font-semibold"
-            onClick={() => dispatch(clearList())}
+            onClick={() => dispatch(myList.clearList())}
           >
             Clear List
           </button>

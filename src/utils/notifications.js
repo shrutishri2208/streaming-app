@@ -12,8 +12,8 @@ export const notifications = [
   {
     id: 2,
     image: noti2,
-    heading: "Lookahead",
-    text: "Explore what's coming soon",
+    heading: "All time Favourite",
+    text: "Squid Games",
     date: "1 month ago",
   },
 ];
