@@ -10,11 +10,12 @@ const Genres = ({ isMenu, setIsMenu }) => {
   const dispatch = useDispatch();
   return (
     <div
-      className={`h-screen p-8 top-14 left-0 fixed genre-container ${
+      className={`p-8 bottom-0 top-14 left-0 fixed genre-container ${
         isMenu ? "genre-container-display" : "genre-container-close"
       }`}
     >
       <div className="flex flex-col text-left text-xl mt-10">
+        <Search />
         <button
           className="p-4 hover:bg-gray-800 hover:bg-opacity-50"
           onClick={() => {
@@ -63,7 +64,6 @@ const Genres = ({ isMenu, setIsMenu }) => {
         >
           For Kids
         </button>
-        <Search />
       </div>
       {/* <div className="flex flex-col text-sm justify-start">
         <Link to="/">

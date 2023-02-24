@@ -13,32 +13,23 @@ const Footer = () => {
           Made by Shruti Shrivastava
         </p>
         <div className="flex justify-between">
-          <LinkedInIcon className="scale-125" />
-          <GitHubIcon className="scale-125" />
-          <EmailIcon className="scale-125" />
+          <a
+            href="https://www.linkedin.com/in/shruti-shrivastava-676606228/"
+            target="_blank"
+          >
+            <LinkedInIcon className="scale-125" />
+          </a>
+          <a href="https://github.com/shrutishri2208" target="_blank">
+            <GitHubIcon className="scale-125" />
+          </a>
+          <a
+            href="mailto:shrutishri2208@gmail.com?body=Hello%20there%20profile%20viewer%20:)"
+            target="_blank"
+          >
+            <EmailIcon className="scale-125" />
+          </a>
         </div>
       </div>
-
-      {/* <div className="flex ">
-        <CgFacebook className="mr-12 scale-150" />
-        <FaInstagram className="mr-12 scale-150" />
-        <FaTwitter className="mr-12 scale-150" />
-        <FaYoutube className="mr-12 scale-150" />
-      </div>
-
-      <div className="my-8 grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4  gap-y-6 text-xs text-gray-500 flex-wrap">
-        {footer.map((item, index) => {
-          return <div key={index}>{item}</div>;
-        })}
-      </div>
-      <div>
-        <div className="border-2 border-gray-500 inline py-1 px-2 text-gray-500">
-          Service Code
-        </div>
-        <div className="text-xs text-gray-500 my-4">
-          1997-2023 Watcher, Inc.
-        </div>
-      </div> */}
     </section>
   );
 };

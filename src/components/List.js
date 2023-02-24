@@ -6,6 +6,8 @@ import { useSelector } from "react-redux";
 
 const List = ({ list }) => {
   const genre = useSelector((state) => state.genre.genre);
+  console.log();
+
   const heading =
     genre === "home"
       ? "home"
@@ -15,14 +17,24 @@ const List = ({ list }) => {
       ? "movies"
       : genre === "show"
       ? "TV Series"
-      : "For Kids";
+      : genre === "kids"
+      ? "For Kids (12+)"
+      : `Results for '${genre}'`;
 
   const showList =
     genre === "home"
       ? list.slice(25, 50)
       : genre === "trending"
       ? list.slice(0, 25)
-      : list.filter((listItem) => listItem.summary.type === genre);
+      : genre === "kids"
+      ? list.filter(
+          (listItem) => listItem.jawSummary.maturity.rating.value === "12"
+        )
+      : genre === "show" || genre === "movie"
+      ? list.filter((listItem) => listItem.summary.type === genre)
+      : list.filter((listItem) =>
+          listItem.jawSummary.title.toLowerCase().includes(genre.toLowerCase())
+        );
 
   return (
     <div className="mx-24 mt-20">

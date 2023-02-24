@@ -11,12 +11,14 @@ const NotificationList = () => {
   useEffect(() => {
     setIsNotification(false);
   }, [pathname]);
+
   return (
     <div className="relative mr-4 mt-0.5">
       <div>
         <NotificationsNoneIcon
           className="cursor-pointer"
-          onClick={() => setIsNotification(!isNotification)}
+          onMouseEnter={() => setIsNotification(true)}
+          onMouseLeave={() => setIsNotification(false)}
         />
         <p className=" absolute top-0 -right-1 bg-blue-700  text-center rounded-full px-1 text-xs">
           2

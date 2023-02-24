@@ -15,7 +15,7 @@ const MyList = () => {
         {myList.length !== 0 && (
           <button
             className="bg-white text-black text-lg py-1 px-2 rounded-md font-semibold"
-            onClick={() => dispatch(myList.clearList())}
+            onClick={() => dispatch(clearList())}
           >
             Clear List
           </button>

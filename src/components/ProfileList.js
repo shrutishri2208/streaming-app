@@ -19,13 +19,13 @@ const ProfileList = () => {
         onMouseEnter={() => {
           setIsProfile(true);
         }}
-        onMouseLeave={() => setIsProfile(!isProfile)}
+        onMouseLeave={() => setIsProfile(false)}
       >
         <AccountBoxIcon className="rounded-sm scale-150 mt-1 " />
         <ArrowDropDownIcon className="cursor-pointer profile-arrow" />
       </div>
       {isProfile && (
-        <div className="absolute w-48 top-12 right-0 bg-black bg-opacity-90 profile-list p-2 pb-0">
+        <div className="absolute w-48 top-12 right-0 bg-black  profile-list p-2 pb-0">
           {profiles.map((profile, index) => {
             return <Profile {...profile} key={index} />;
           })}

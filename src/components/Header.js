@@ -34,7 +34,7 @@ const Header = () => {
           className="watcher text-3xl font-bold text-blue-800 mr-12"
           onClick={() => dispatch(setGenre("home"))}
         >
-          StreamR
+          Streamify
         </div>
       </Link>
       <div className="flex absolute right-8 top-4">
