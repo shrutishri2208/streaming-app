@@ -16,54 +16,66 @@ const Genres = ({ isMenu, setIsMenu }) => {
     >
       <div className="flex flex-col text-left text-xl mt-10">
         <Search />
-        <button
-          className="p-4 hover:bg-gray-800 hover:bg-opacity-50"
-          onClick={() => {
-            dispatch(setGenre("home"));
-            setIsMenu(false);
-          }}
-        >
-          <Link to="/">Home</Link>
-        </button>
-        <button
-          className="p-4 hover:bg-gray-800 hover:bg-opacity-50"
-          onClick={() => {
-            dispatch(setGenre("trending"));
-            setIsMenu(false);
-          }}
-        >
-          <Link to="/">Trending</Link>
-        </button>
-        <button className="p-4 hover:bg-gray-800 hover:bg-opacity-50 text-center">
-          <Link to="/myList">My List</Link>
-        </button>
-        <button
-          className="p-4 hover:bg-gray-800 hover:bg-opacity-50"
-          onClick={() => {
-            dispatch(setGenre("movie"));
-            setIsMenu(false);
-          }}
-        >
-          Movies
-        </button>
-        <button
-          className="p-4 hover:bg-gray-800 hover:bg-opacity-50"
-          onClick={() => {
-            dispatch(setGenre("show"));
-            setIsMenu(false);
-          }}
-        >
-          TV Series
-        </button>
-        <button
-          className="p-4 hover:bg-gray-800 hover:bg-opacity-50"
-          onClick={() => {
-            dispatch(setGenre("kids"));
-            setIsMenu(false);
-          }}
-        >
-          For Kids
-        </button>
+        <Link to="/">
+          <button
+            className="w-full p-4 hover:bg-gray-800 hover:bg-opacity-50"
+            onClick={() => {
+              dispatch(setGenre("home"));
+              setIsMenu(false);
+            }}
+          >
+            Home
+          </button>
+        </Link>
+        <Link to="/">
+          <button
+            className="w-full p-4 hover:bg-gray-800 hover:bg-opacity-50"
+            onClick={() => {
+              dispatch(setGenre("trending"));
+              setIsMenu(false);
+            }}
+          >
+            Trending
+          </button>
+        </Link>
+        <Link to="/myList">
+          <button className="w-full p-4 hover:bg-gray-800 hover:bg-opacity-50 text-center">
+            My List
+          </button>
+        </Link>
+        <Link to="/">
+          <button
+            className="w-full p-4 hover:bg-gray-800 hover:bg-opacity-50"
+            onClick={() => {
+              dispatch(setGenre("movie"));
+              setIsMenu(false);
+            }}
+          >
+            Movies
+          </button>
+        </Link>
+        <Link to="/">
+          <button
+            className="w-full p-4 hover:bg-gray-800 hover:bg-opacity-50"
+            onClick={() => {
+              dispatch(setGenre("show"));
+              setIsMenu(false);
+            }}
+          >
+            TV Series
+          </button>
+        </Link>
+        <Link to="/">
+          <button
+            className="w-full p-4 hover:bg-gray-800 hover:bg-opacity-50"
+            onClick={() => {
+              dispatch(setGenre("kids"));
+              setIsMenu(false);
+            }}
+          >
+            For Kids
+          </button>
+        </Link>
       </div>
       {/* <div className="flex flex-col text-sm justify-start">
         <Link to="/">
