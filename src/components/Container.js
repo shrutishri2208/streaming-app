@@ -31,24 +31,8 @@ const Container = () => {
   //   fetchData();
   // }, []);
 
-  const trendingList = list.slice(0, 15);
-  const casualList = list.slice(15, 30);
-  const whileList = list.slice(30, 45);
-  const newList = list.slice(0, 15);
-  const popular = list.slice(15, 30);
-  const onlyOn = list.slice(30, 45);
-
-  const headings = {
-    trending: "Trending Now",
-    casual: "Casual Viewing",
-    while: "Watch for a While",
-    new: "New Releases",
-    popular: "Popular on Watcher",
-    onlyOn: "Only on Watcher",
-  };
-
   return (
-    <section className="mt-16 ml-8">
+    <section className="mt-16">
       {isLoading ? (
         <div>
           <div className="list-heading font-bold mb-2 px-12 text-center text-4xl">
@@ -57,12 +41,7 @@ const Container = () => {
         </div>
       ) : (
         <div>
-          <List list={trendingList} heading={headings.trending} />
-          <List list={casualList} heading={headings.casual} />
-          <List list={whileList} heading={headings.while} />
-          <List list={newList} heading={headings.new} />
-          <List list={popular} heading={headings.popular} />
-          <List list={onlyOn} heading={headings.onlyOn} />
+          <List list={list} />
         </div>
       )}
     </section>

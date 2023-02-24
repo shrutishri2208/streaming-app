@@ -1,34 +1,36 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import Search from "./Search";
 
-const Genres = () => {
-  const [isBrowse, setIsBrowse] = useState(false);
-  const { pathname } = useLocation();
-  useEffect(() => {
-    setIsBrowse(false);
-  }, [pathname]);
+const Genres = ({ isMenu }) => {
+  const [isBrowse, setIsBrowse] = useState(true);
   return (
-    <div className="h-screen bg-black p-8 top-12 left-0 fixed">
+    <div
+      className={`h-screen p-8 top-12 left-0 fixed genre-container ${
+        isMenu ? "genre-container-display" : "genre-container-close"
+      }`}
+    >
       <div className="flex flex-col text-left text-xl mt-10">
         <button className="p-4 hover:bg-gray-800 hover:bg-opacity-50">
           Home
         </button>
         <button className="p-4 hover:bg-gray-800 hover:bg-opacity-50">
-          TV Shows
-        </button>
-        <button className="p-4 hover:bg-gray-800 hover:bg-opacity-50">
-          Movies
-        </button>
-        <button className="p-4 hover:bg-gray-800 hover:bg-opacity-50">
-          New & Popular
+          On Trending
         </button>
         <button className="p-4 hover:bg-gray-800 hover:bg-opacity-50">
           My List
         </button>
         <button className="p-4 hover:bg-gray-800 hover:bg-opacity-50">
-          Browse by Languages
+          Movies
         </button>
+        <button className="p-4 hover:bg-gray-800 hover:bg-opacity-50">
+          TV Series
+        </button>
+        <button className="p-4 hover:bg-gray-800 hover:bg-opacity-50">
+          For Kids
+        </button>
+        <Search />
       </div>
       {/* <div className="flex flex-col text-sm justify-start">
         <Link to="/">

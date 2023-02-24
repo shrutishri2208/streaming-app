@@ -7,6 +7,7 @@ import MoveDownIcon from "@mui/icons-material/MoveDown";
 import PersonIcon from "@mui/icons-material/Person";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import user3 from "../utils/assets/user3.png";
+import AccountBoxIcon from "@mui/icons-material/AccountBox";
 
 const ProfileList = () => {
   const [isProfile, setIsProfile] = useState(false);
@@ -20,15 +21,11 @@ const ProfileList = () => {
         }}
         onMouseLeave={() => setIsProfile(!isProfile)}
       >
-        <img
-          src={user3}
-          alt="profile-image"
-          className="rounded-sm h-10 sm:h-8 "
-        />
+        <AccountBoxIcon className="rounded-sm scale-150 mt-1 " />
         <ArrowDropDownIcon className="cursor-pointer profile-arrow" />
       </div>
       {isProfile && (
-        <div className="absolute w-48 top-12 right-0 bg-black profile-list p-2 pb-0">
+        <div className="absolute w-48 top-12 right-0 bg-black bg-opacity-90 profile-list p-2 pb-0">
           {profiles.map((profile, index) => {
             return <Profile {...profile} key={index} />;
           })}

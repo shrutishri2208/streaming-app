@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 import myListReducer from "./myList/myListReducer";
-import titlesReducer from "./titles/titlesReducer";
+import genreReducer from "./genre/genreReducer";
 
 const rootReducers = combineReducers({
   myList: myListReducer,
-  titles: titlesReducer,
+  genre: genreReducer,
 });
 
 export default rootReducers;

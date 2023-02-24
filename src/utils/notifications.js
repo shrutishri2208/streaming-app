@@ -12,7 +12,7 @@ export const notifications = [
   {
     id: 2,
     image: noti2,
-    heading: "Watcher Lookahead",
+    heading: "Lookahead",
     text: "Explore what's coming soon",
     date: "1 month ago",
   },

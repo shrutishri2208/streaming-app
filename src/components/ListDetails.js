@@ -57,7 +57,7 @@ const ListDetails = ({ title }) => {
         </div>
 
         <div className="extra-details flex gap-4 justify-between md:scale-75 md:text-xs lg:scale-90 lg:my-1 xl:text-xs items-center">
-          <div className="text-green-500 font-bold">92% MATCH</div>
+          <div className="text-blue-700 font-bold">92% MATCH</div>
           <div className="border-2 px-1">
             {title.jawSummary.maturity.rating.value.slice(-2)}
           </div>
