@@ -9,7 +9,7 @@ const MyList = () => {
   const myList = useSelector((state) => state.myList.myList);
 
   return (
-    <div className="mt-20">
+    <div className="mt-20 mx-24">
       <div className="flex items-center justify-between mx-12">
         <div className="list-heading font-bold  ">My List</div>
         {myList.length !== 0 && (
@@ -22,7 +22,7 @@ const MyList = () => {
         )}
       </div>
 
-      <div className=" flex flex-wrap mx-12 w-screen mt-3">
+      <div className=" w-full grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         {myList.map((item, index) => {
           return <MyListItem title={item} key={index} />;
         })}

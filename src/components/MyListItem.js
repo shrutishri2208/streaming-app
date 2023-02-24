@@ -4,7 +4,7 @@ import MyListDetails from "./MyListDetails";
 
 const MyListItem = ({ title }) => {
   return (
-    <div className={` m-1 w-64 item relative`}>
+    <div className={` m-2 w-64 item relative`}>
       <MyListImage title={title} />
       <MyListDetails title={title} />
     </div>

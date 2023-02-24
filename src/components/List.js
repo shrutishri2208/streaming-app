@@ -40,7 +40,7 @@ const List = ({ list }) => {
     <div className="mx-24 mt-20">
       <h2 className="capitalize text-xl font-bold -mb-2">{heading}</h2>
       <div>
-        <div className="w-full grid grid-cols-5">
+        <div className="w-full grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
           {showList.map((title, index) => {
             return <ListItem key={index} title={title} />;
           })}

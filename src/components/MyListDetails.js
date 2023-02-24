@@ -46,7 +46,7 @@ const ListDetails = ({ title }) => {
       </div>
 
       <div className="extra-details flex justify-between my-2">
-        <div className="text-green-500 font-bold">92% MATCH</div>
+        <div className="text-blue-700 font-bold">92% MATCH</div>
         <div className="border-2 px-1">
           {title.jawSummary.maturity.rating.value}
         </div>

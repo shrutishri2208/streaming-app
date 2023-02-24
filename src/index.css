@@ -51,7 +51,7 @@ button {
 
 .list-details {
   transition: all 0.3s ease-out;
-  opacity: 0;
+  opacity: 1;
   background: rgb(0, 0, 0, 0.8);
 }
 

@@ -14,12 +14,12 @@ const ListDetails = ({ title }) => {
 
   return (
     <div className="absolute top-0 h-full w-full rounded-md list-details flex items-center justify-center ">
-      <div className="relative top-0 sm:scale-50 md:scale-75 lg:scale-105 xl:scale-105">
-        <p className="text-center font-bold xl:my-2 lg:text-xs xl:text-sm 2xl:text-base">
+      <div className="relative top-0 h-full w-full p-2">
+        <p className="text-center font-bold my-2">
           {title.jawSummary.episodeTitle || title.jawSummary.title}
         </p>
 
-        <div className="flex items-center justify-between md:scale-75 lg:scale-90">
+        <div className="flex items-center justify-between mb-4">
           <div className="flex justify-between gap-2">
             <div className="flex items-center">
               <button>
@@ -56,7 +56,7 @@ const ListDetails = ({ title }) => {
           </Link>
         </div>
 
-        <div className="extra-details flex gap-4 justify-between md:scale-75 md:text-xs lg:scale-90 lg:my-1 xl:text-xs items-center">
+        <div className="extra-details flex gap-4 justify-between  items-center mb-1">
           <div className="text-blue-700 font-bold">92% MATCH</div>
           <div className="border-2 px-1">
             {title.jawSummary.maturity.rating.value.slice(-2)}
@@ -66,7 +66,7 @@ const ListDetails = ({ title }) => {
             {title.jawSummary.delivery.quality}
           </div>
         </div>
-        <div className="tags flex text-sm md:scale-75 lg:scale-90 lg:text-xs">
+        <div className="tags flex text-sm ">
           {title.jawSummary.tags.map((tag, index) => {
             return (
               <p key={index} className="">
