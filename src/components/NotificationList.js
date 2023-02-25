@@ -5,7 +5,7 @@ import Notification from "./Notification";
 import { useLocation } from "react-router-dom";
 
 const NotificationList = () => {
-  const [isNotification, setIsNotification] = useState(false);
+  const [isNotification, setIsNotification] = useState(true);
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const NotificationList = () => {
         </p>
       </div>
       {isNotification && (
-        <div className="absolute w-96 top-12 right-0 bg-black border-t-2">
+        <div className="notifications-container absolute w-96 top-12 right-0 bg-black border-t-2">
           {notifications.map((notification) => {
             return <Notification {...notification} />;
           })}

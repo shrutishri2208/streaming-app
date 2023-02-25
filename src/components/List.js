@@ -37,7 +37,7 @@ const List = ({ list }) => {
         );
 
   return (
-    <div className="mt-20 2xl:mx-24 xl:mx-24 lg:mx-24">
+    <div className="mt-20 2xl:mx-24 xl:mx-24 lg:mx-24 md:mx-0 sm:mx-12 mx-16">
       <h2 className="capitalize text-xl font-bold mb-2 ml-9">{heading}</h2>
       <div>
         <div className="w-full grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2">

@@ -16,7 +16,7 @@ const DetailsImage = ({ state }) => {
           alt="detailsimage"
         />
       </div>
-      <div className="absolute bottom-10 left-10 flex gap-8 items-center">
+      <div className="absolute bottom-10 left-10 flex gap-8 items-center  details-play">
         <div className="flex items-center scale-125 bg-white text-black px-4 py-0.5 rounded-md cursor-pointer">
           <PlayArrowIcon className="scale-125 mr-1 " />
           <button className="text-lg font-semibold">Play</button>
