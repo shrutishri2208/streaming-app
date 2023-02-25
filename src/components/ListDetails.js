@@ -31,7 +31,7 @@ const ListDetails = ({ title }) => {
                 <ThumbDownAltIcon className="scale-110 thumbs-info border-2 rounded-full" />
               </button>
             </div>
-            {/* {!myListId.includes(title.summary.id) ? (
+            {!myListId.includes(title.summary.id) ? (
               <div className="flex items-center hover:opacity-100 add-to-list-btn">
                 <button
                   onClick={() => {
@@ -47,7 +47,7 @@ const ListDetails = ({ title }) => {
                   <DoneIcon className=" scale-110 thumbs-info border-2 rounded-full" />
                 </button>
               </div>
-            )} */}
+            )}
           </div>
           <Link to={`/details`} state={title}>
             <button>
