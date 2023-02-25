@@ -9,6 +9,7 @@ import genreReducer from "./genre/genreReducer";
 const persistConfig = {
   key: "root",
   storage,
+  blacklist: ["genre"],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducers);

@@ -18,7 +18,7 @@ const List = ({ list }) => {
       : genre === "show"
       ? "TV Series"
       : genre === "kids"
-      ? "For Kids (12+)"
+      ? "For Kids (14+)"
       : `Results for '${genre}'`;
 
   const showList =
@@ -28,7 +28,9 @@ const List = ({ list }) => {
       ? list.slice(0, 25)
       : genre === "kids"
       ? list.filter(
-          (listItem) => listItem.jawSummary.maturity.rating.value === "12"
+          (listItem) =>
+            listItem.jawSummary.maturity.rating.value === "TV-G" ||
+            listItem.jawSummary.maturity.rating.value === "TV-14"
         )
       : genre === "show" || genre === "movie"
       ? list.filter((listItem) => listItem.summary.type === genre)

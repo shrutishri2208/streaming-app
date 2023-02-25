@@ -26,8 +26,8 @@ const NotificationList = () => {
       </div>
       {isNotification && (
         <div className="notifications-container absolute w-96 top-12 right-0 bg-black border-t-2">
-          {notifications.map((notification) => {
-            return <Notification {...notification} />;
+          {notifications.map((notification, index) => {
+            return <Notification {...notification} key={index} />;
           })}
         </div>
       )}
