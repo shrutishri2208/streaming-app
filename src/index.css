@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@700&family=Quicksand:wght@700&display=swap");
 
 :root {
   --blue: rgb(3, 3, 36);
@@ -8,15 +10,22 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-color: rgb(19, 19, 19); */
   color: white;
   background-color: var(--blue);
   /* overflow-x: hidden; */
+}
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.home-heading {
+  font-family: "Montserrat", sans-serif;
 }
 
 .header {
@@ -51,30 +60,8 @@ button {
 
 .list-details {
   transition: all 0.3s ease-out;
-  opacity: 0;
+  opacity: 1;
   background: rgb(0, 0, 0, 0.8);
-}
-
-@media screen and (max-width: 640px) {
-  .details-play {
-    display: none;
-  }
-  .info-container {
-    scale: 0.9;
-  }
-  .notifications-container {
-    width: 12rem;
-  }
-  .notifications {
-    display: flex;
-    flex-direction: column;
-  }
-  .notifications > img {
-    width: 100%;
-    height: 6rem;
-    margin: auto;
-    margin-bottom: 0.5rem;
-  }
 }
 
 .extra-details {
@@ -121,10 +108,6 @@ button {
   transition: all 0.5s;
 }
 
-.profile-list {
-  border: 1px solid white;
-}
-
 .profile-btn:hover > .profile-arrow {
   transition: all 0.3s;
   transform: rotate(180deg);
@@ -161,13 +144,42 @@ button {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .md-genre-container {
+@media screen and (max-width: 640px) {
+  .details-play {
     display: none;
   }
-}
-@media screen and (max-width: 1024px) {
-  .lg-genre-container {
+  .info-container {
+    scale: 0.9;
+  }
+  .notifications-container {
+    width: 20rem;
+    right: -4rem;
+  }
+  .notifications {
+    display: flex;
+    flex-direction: column;
+  }
+  .notifications > img {
+    width: 10rem;
+    height: 6rem;
+    margin: auto;
+    margin-bottom: 0.5rem;
+  }
+  .home-heading {
+    margin: 0;
+    text-align: center;
+  }
+  .header {
+    border-bottom: 2px solid white;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .notification-list {
     display: none;
+  }
+  .profile-list {
+    margin-right: -1rem;
   }
 }

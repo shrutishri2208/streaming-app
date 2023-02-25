@@ -17,9 +17,9 @@ const Header = () => {
   }, [pathname]);
 
   return (
-    <section className="py-4 flex justify-center items-center fixed top-0 w-full header ">
+    <section className="py-3 flex justify-center items-center fixed top-0 w-full header">
       <button
-        className="absolute left-8 top-4"
+        className="absolute left-8 top-5"
         onClick={() => setIsMenu(!isMenu)}
       >
         {!isMenu ? (
@@ -31,7 +31,7 @@ const Header = () => {
       {isMenu && <Genres isMenu={isMenu} setIsMenu={setIsMenu} />}
       <Link to="/">
         <div
-          className="watcher text-3xl font-bold text-blue-800 mr-12"
+          className="title text-4xl font-bold text-blue-800"
           onClick={() => dispatch(setGenre("home"))}
         >
           Streamify

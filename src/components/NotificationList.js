@@ -13,7 +13,7 @@ const NotificationList = () => {
   }, [pathname]);
 
   return (
-    <div className="relative mr-4 mt-0.5">
+    <div className="relative mt-0.5 notification-list">
       <div>
         <NotificationsNoneIcon
           className="cursor-pointer"

@@ -12,7 +12,7 @@ const ListDetails = ({ title }) => {
 
   return (
     <div className="absolute p-2 top-0 h-full w-full rounded-md list-details">
-      <div className="relative top-0 h-full w-full p-2 2xl:scale-100 xl:scale-100 lg:scale-100 md:scale-90 sm:scale-90">
+      <div className="relative top-0 h-full w-full p-2 2xl:scale-100 xl:scale-100 lg:scale-100 md:scale-90 sm:scale-90 scale-75 -mt-4">
         <p className="text-base text-center font-bold">
           {title.jawSummary.episodeTitle || title.jawSummary.title}
         </p>

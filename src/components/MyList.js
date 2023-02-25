@@ -9,9 +9,9 @@ const MyList = () => {
   const myList = useSelector((state) => state.myList.myList);
 
   return (
-    <div className="mt-20 2xl:mx-24 xl:mx-24 lg:mx-24 md:mx-0 sm:mx-12">
+    <div className="mt-20 2xl:mx-24 xl:mx-24 lg:mx-24 md:mx-0 sm:mx-12 mx-12">
       <div className="flex items-center justify-between">
-        <div className="capitalize text-xl font-bold mb-2 ml-9">My List</div>
+        <div className="capitalize text-xl font-bold mb-2">My List</div>
         {myList.length !== 0 && (
           <button
             className="bg-white text-black text-lg py-1 px-2 rounded-md font-semibold"

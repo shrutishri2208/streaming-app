@@ -13,7 +13,7 @@ const ProfileList = () => {
   const [isProfile, setIsProfile] = useState(false);
 
   return (
-    <div className="relative ml-4">
+    <div className="relative ml-10 profile-list">
       <div
         className="flex items-center profile-btn"
         onMouseEnter={() => {
@@ -25,7 +25,7 @@ const ProfileList = () => {
         <ArrowDropDownIcon className="cursor-pointer profile-arrow" />
       </div>
       {isProfile && (
-        <div className="absolute w-48 top-12 right-0 bg-black  profile-list p-2 pb-0">
+        <div className="absolute w-48 top-16 right-0 bg-black border-2 p-2 pb-0">
           {profiles.map((profile, index) => {
             return <Profile {...profile} key={index} />;
           })}

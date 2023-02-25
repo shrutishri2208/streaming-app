@@ -21,7 +21,6 @@ const Search = () => {
       <div>
         <form onSubmit={handleSubmit}>
           <input
-            autoFocus
             className={`search-input bg-transparent text-sm outline-none pb-1 ml-2 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-full  `}
             placeholder="Search..."
             value={search}
