@@ -11,11 +11,10 @@ import { addItem } from "../redux/myList/myListActions";
 const ListDetails = ({ title }) => {
   const dispatch = useDispatch();
   const myListId = useSelector((state) => state.myList.myListId);
-  console.log(myListId);
 
   return (
     <div className="absolute top-0 h-full w-full rounded-md list-details flex items-center justify-center ">
-      <div className="relative top-0 h-full w-full p-2">
+      <div className="relative top-0 h-full w-full p-2 2xl:scale-100 xl:scale-100 lg:scale-100 md:scale-90 sm:scale-90">
         <p className="text-center font-bold my-2">
           {title.jawSummary.episodeTitle || title.jawSummary.title}
         </p>
