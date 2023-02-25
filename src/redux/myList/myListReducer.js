@@ -2,7 +2,7 @@ import { ACTIONS } from "./myListTypes";
 
 const initialState = {
   myList: [],
-  myListId: [0],
+  myListId: [],
 };
 
 const myListReducer = (state = initialState, action) => {

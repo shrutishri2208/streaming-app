@@ -9,14 +9,13 @@ import genreReducer from "./genre/genreReducer";
 const persistConfig = {
   key: "root",
   storage,
-  blacklist: ["myList"],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducers);
 
 export const store = createStore(persistedReducer, applyMiddleware(thunk));
 
-export const persistor = persistStore(store, { blacklist: ["myList"] });
+export const persistor = persistStore(store);
 
 // import { createStore } from "redux";
 // import myListReducer from "./myList/myListReducer";
