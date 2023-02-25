@@ -31,7 +31,7 @@ const ListDetails = ({ title }) => {
                 <ThumbDownAltIcon className="scale-110 thumbs-info border-2 rounded-full" />
               </button>
             </div>
-            {!myListId.includes(title.summary.id) ? (
+            {/* {!myListId.includes(title.summary.id) ? (
               <div className="flex items-center hover:opacity-100 add-to-list-btn">
                 <button
                   onClick={() => {
@@ -47,7 +47,7 @@ const ListDetails = ({ title }) => {
                   <DoneIcon className=" scale-110 thumbs-info border-2 rounded-full" />
                 </button>
               </div>
-            )}
+            )} */}
           </div>
           <Link to={`/details`} state={title}>
             <button>
@@ -56,7 +56,7 @@ const ListDetails = ({ title }) => {
           </Link>
         </div>
 
-        <div className="extra-details flex gap-4 justify-between  items-center mb-1">
+        <div className="extra-details flex justify-between items-center mb-1">
           <div className="text-blue-700 font-bold">92% MATCH</div>
           <div className="border-2 px-1">
             {title.jawSummary.maturity.rating.value.slice(-2)}

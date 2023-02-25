@@ -10,8 +10,8 @@ const MyList = () => {
 
   return (
     <div className="mt-20 mx-24">
-      <div className="flex items-center justify-between mx-12">
-        <div className="list-heading font-bold  ">My List</div>
+      <div className="flex items-center justify-between">
+        <div className="capitalize text-xl font-bold mb-2 ml-9">My List</div>
         {myList.length !== 0 && (
           <button
             className="bg-white text-black text-lg py-1 px-2 rounded-md font-semibold"
